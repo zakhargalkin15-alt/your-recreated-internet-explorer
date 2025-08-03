@@ -13,7 +13,34 @@ This repository features a fully recreated version of Internet Explorer using VB
 ## Is this a virus?
 
 **Nope, it's not a virus!**  
-This VBScript is safe to use. The code is open and you can review it yourself. It does not contain any malicious instructions—its only purpose is to recreate the Internet Explorer experience and allow you to browse the web. If you have any concerns, feel free to check the script before running it!
+This VBScript is safe to use. You can review the code yourself (see the script below). It simply creates an Internet Explorer window, navigates to a website, and optionally interacts with elements on the page. There are no malicious instructions—its only purpose is to recreate the Internet Explorer experience and allow you to browse the web. If you have any concerns, feel free to check the script before running it!
+
+## Example Code
+
+```vbscript
+' Create an Internet Explorer object
+Set IE = CreateObject("InternetExplorer.Application")
+
+' Make the IE window visible
+IE.Visible = True
+
+' Navigate to a website
+IE.Navigate "https://www.google.com"
+
+' Optional: Wait for the page to load (ReadyState 4 indicates complete)
+Do While IE.ReadyState <> 4 Or IE.Busy
+    WScript.Sleep 100 ' Wait for 100 milliseconds
+Loop
+
+' You can now interact with the page, for example, by accessing elements
+' Set objElement = IE.Document.getElementById("someElementId")
+' If IsObject(objElement) Then
+'     objElement.Click
+' End If
+
+' Clean up the object
+Set IE = Nothing
+```
 
 ## How to Use
 
