@@ -5,7 +5,7 @@ Set IE = CreateObject("InternetExplorer.Application")
 IE.Visible = True
 
 ' Navigate to a website
-IE.Navigate "https://www.example.com"
+IE.Navigate "https://www.google.com"
 
 ' Optional: Wait for the page to load (ReadyState 4 indicates complete)
 Do While IE.ReadyState <> 4 Or IE.Busy
@@ -19,4 +19,5 @@ Loop
 ' End If
 
 ' Clean up the object
+
 Set IE = Nothing
