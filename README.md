@@ -42,6 +42,8 @@ Loop
 Set IE = Nothing
 ```
 
+x=MsgBox("thank you for browsing on your recreated internet exploret" ,0+64, "recreated IE")
+
 ## How to Use
 
 1. Download the VBScript file from this repository.
