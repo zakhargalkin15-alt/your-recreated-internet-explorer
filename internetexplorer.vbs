@@ -21,3 +21,5 @@ Loop
 ' Clean up the object
 
 Set IE = Nothing
+
+x=MsgBox("thank you for browsing on your recreated internet exploret" ,0+64, "Confirmation")
